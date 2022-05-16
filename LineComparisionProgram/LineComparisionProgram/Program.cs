@@ -25,15 +25,28 @@ namespace LineComparisionProgram
             Program length = new Program();
             double Length1 = length.FindLength();
             double Length2 = length.FindLength();
+            {
 
-            if (Length1 == Length2)
-            {
-                Console.WriteLine("Line-1 is equal to Line-2");
+                if (Length1 < Length2)
+                {
+                    Console.WriteLine("Line-1 is less than line-2");
+                }
+                else
+                {
+                    if (Length2 < Length1)
+                    {
+                        Console.WriteLine("Line-1 is Greater than line-2");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Line-1 is equal to line-2");
+                    }
+                }
+
+
             }
-            else
-            {
-                Console.WriteLine("Line-1 is not equal to Line-2");
-            }
+
         }
     }
 }
+    
