@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Line_Comparison
+namespace LineComparisionProgram
 {
-    internal class Program
+    public class Program
     {
         public double FindLength()
         {
@@ -18,14 +18,22 @@ namespace Line_Comparison
             float y2 = Convert.ToInt32(Console.ReadLine());
             double Length = Math.Sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
             return Length;
-
         }
 
         public static void Main(string[] args)
         {
             Program length = new Program();
-            double Length = length.FindLength();
-            Console.WriteLine("The length of two points of line :" + Length);
+            double Length1 = length.FindLength();
+            double Length2 = length.FindLength();
+
+            if (Length1 == Length2)
+            {
+                Console.WriteLine("Line-1 is equal to Line-2");
+            }
+            else
+            {
+                Console.WriteLine("Line-1 is not equal to Line-2");
+            }
         }
     }
 }
